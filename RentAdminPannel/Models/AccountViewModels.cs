@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using RentAdminPannel.Models;
 
 namespace RentAdminPannel.Models
 {
+    
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
@@ -64,6 +66,8 @@ namespace RentAdminPannel.Models
 
     public class RegisterViewModel
     {
+        
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
