@@ -11,7 +11,7 @@ namespace RentAdminPannel.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class tbl_category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,7 +20,7 @@ namespace RentAdminPannel.Models
             this.tbl_product = new HashSet<tbl_product>();
             this.tbl_subcategory = new HashSet<tbl_subcategory>();
         }
-    
+    [Key]
         public long categoryid { get; set; }
         public string categoryname { get; set; }
         public string categorydescription { get; set; }

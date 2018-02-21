@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-
 namespace RentAdminPannel.Models
 {
     public class RentAdminPannelContext : DbContext
@@ -21,7 +20,7 @@ namespace RentAdminPannel.Models
         {
         }
 
-        public System.Data.Entity.DbSet<RentAdminPannel.tbl_category> tbl_category { get; set; }
-        public System.Data.Entity.DbSet<RentAdminPannel.tbl_usermaster> tbl_usermaster { get; set; }
+        public System.Data.Entity.DbSet<RentAdminPannel.Models.tbl_category> tbl_category { get; set; }
+        public System.Data.Entity.DbSet<RentAdminPannel.Models.tbl_usermaster> tbl_usermaster { get; set; }
     }
 }

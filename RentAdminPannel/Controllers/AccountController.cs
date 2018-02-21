@@ -13,7 +13,7 @@ namespace RentAdminPannel.Controllers
 {
     public class AccountController : Controller
     {
-        private RentAdminPannelContext db = new RentAdminPannelContext();
+        
         public ActionResult Login()
         {
             return View();
@@ -24,9 +24,22 @@ namespace RentAdminPannel.Controllers
             return View(usermodel);
         }
 
+        [HttpPost]
+        public ActionResult AddorEdit([Bind(Include = "email,password,firstname,lastname,gender,dob,address,country,state,city,zipcode,phone")] tbl_usermaster usermodel)
+        {
+            using (rentdbEntities3 dbModel = new rentdbEntities3())
+            {
+               
+                dbModel.tbl_usermaster.Add(usermodel);
+                dbModel.SaveChanges();
+            }
+            ModelState.Clear();
+            ViewBag.SuccessMessage = "Registration Done!";
+            return View("Index", new tbl_usermaster());
+        }
 
 
-
+        /*
         [HttpPost]
         [ValidateAntiForgeryToken]
        public ActionResult Register([Bind(Include = "email,password,firstname,lastname,gender,dob,address,country,state,city,zipcode,phone")] tbl_usermaster tbl_usermaster)
@@ -42,7 +55,7 @@ namespace RentAdminPannel.Controllers
             ModelState.Clear();
             ViewBag.SuccessMessage = "Registration Done! Click on Home Button";
             return View("Index");
-        }
+        }*/
     }
 }
         //Get 
