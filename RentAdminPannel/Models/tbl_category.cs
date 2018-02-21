@@ -7,30 +7,30 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class tbl_subcategory
+    
+    public partial class tbl_category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_subcategory()
+        public tbl_category()
         {
             this.tbl_product = new HashSet<tbl_product>();
+            this.tbl_subcategory = new HashSet<tbl_subcategory>();
         }
-        [Key]
-        public long subcategoryid { get; set; }
-        public string subcategoryname { get; set; }
-        public string subcategorydescription { get; set; }
+    
+        public long categoryid { get; set; }
+        public string categoryname { get; set; }
+        public string categorydescription { get; set; }
         public string entryby { get; set; }
         public Nullable<System.DateTime> entrydate { get; set; }
-        public Nullable<byte> isActive { get; set; }
-        public Nullable<long> fk_categoryid { get; set; }
+        public Nullable<byte> isactive { get; set; }
     
-        public virtual tbl_category tbl_category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_product> tbl_product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_subcategory> tbl_subcategory { get; set; }
     }
 }

@@ -205,75 +205,75 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HireModel.Context.cs">
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HireModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HireModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="HireModel.cs">
+    <Compile Include="Models\HireModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HireModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="HireModel.Designer.cs">
+    <Compile Include="Models\HireModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HireModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\pSelectAllproductstatus_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectAllproductstatus_withparticularID_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectAllQuestion_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectAllRollmaster_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectAllRollmaster_withid_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pselectcat_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectProduct_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectsubcat_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pSelectusermaster_Result.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\RentAdminPannelContext.cs" />
+    <Compile Include="Models\tbl_category.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_product.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_productstatus.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_questionmaster.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_rollmaster.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_subcategory.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tbl_usermaster.cs">
+      <DependentUpon>HireModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="pSelectAllproductstatus_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectAllproductstatus_withparticularID_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectAllQuestion_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectAllRollmaster_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectAllRollmaster_withid_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pselectcat_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectProduct_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectsubcat_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="pSelectusermaster_Result.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="tbl_category.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_product.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_productstatus.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_questionmaster.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_rollmaster.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_subcategory.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_usermaster.cs">
-      <DependentUpon>HireModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Admin\assets\css\bootstrap.min.css" />
@@ -480,11 +480,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HireModel.Context.tt">
+    <Content Include="Models\HireModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HireModel.edmx</DependentUpon>
+      <LastGenOutput>HireModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="HireModel.tt">
+    <Content Include="Models\HireModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HireModel.edmx</DependentUpon>
       <LastGenOutput>HireModel.cs</LastGenOutput>
@@ -554,11 +555,11 @@
     <Content Include="Content\User\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\User\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\User\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
-    <EntityDeploy Include="HireModel.edmx">
+    <EntityDeploy Include="Models\HireModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>HireModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="HireModel.edmx.diagram">
+    <Content Include="Models\HireModel.edmx.diagram">
       <DependentUpon>HireModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

@@ -7,12 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class pSelectusermaster_Result
+    public partial class tbl_usermaster
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tbl_usermaster()
+        {
+            this.tbl_product = new HashSet<tbl_product>();
+        }
+    
         public long userid { get; set; }
         public string email { get; set; }
         public string password { get; set; }
@@ -31,5 +38,10 @@ namespace RentAdminPannel
         public Nullable<long> fk_rollid { get; set; }
         public Nullable<long> fk_questionid { get; set; }
         public string answer { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_product> tbl_product { get; set; }
+        public virtual tbl_questionmaster tbl_questionmaster { get; set; }
+        public virtual tbl_rollmaster tbl_rollmaster { get; set; }
     }
 }

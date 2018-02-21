@@ -7,16 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     
-    public partial class pSelectAllRollmaster_Result
+    public partial class pSelectAllproductstatus_Result
     {
-        public long rollid { get; set; }
-        public string rollname { get; set; }
-        public string rolldescription { get; set; }
-        public Nullable<byte> isActive { get; set; }
+        public long poductstatusid { get; set; }
+        public string status { get; set; }
         public string entryby { get; set; }
         public Nullable<System.DateTime> entrydate { get; set; }
     }

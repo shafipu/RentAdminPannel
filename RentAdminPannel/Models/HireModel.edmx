@@ -207,7 +207,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="pDeleteCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="categoryid" Type="bigint" Mode="In" />
         </Function>
@@ -679,7 +678,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="rentdbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="rentdbEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_category" EntityType="Self.tbl_category" />
           <EntitySet Name="tbl_product" EntityType="Self.tbl_product" />
           <EntitySet Name="tbl_productstatus" EntityType="Self.tbl_productstatus" />
@@ -1033,7 +1032,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="rentdbModelStoreContainer" CdmEntityContainer="rentdbEntities">
+        <EntityContainerMapping StorageEntityContainer="rentdbModelStoreContainer" CdmEntityContainer="rentdbEntities3">
           <EntitySetMapping Name="tbl_category">
             <EntityTypeMapping TypeName="rentdbModel.tbl_category">
               <MappingFragment StoreEntitySet="tbl_category">
@@ -1318,7 +1317,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     

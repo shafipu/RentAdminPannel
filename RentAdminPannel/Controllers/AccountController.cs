@@ -9,7 +9,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using RentAdminPannel.Models;
-
 namespace RentAdminPannel.Controllers
 {
     public class AccountController : Controller
@@ -24,6 +23,10 @@ namespace RentAdminPannel.Controllers
             tbl_usermaster usermodel = new tbl_usermaster();
             return View(usermodel);
         }
+
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
        public ActionResult Register([Bind(Include = "email,password,firstname,lastname,gender,dob,address,country,state,city,zipcode,phone")] tbl_usermaster tbl_usermaster)
@@ -36,7 +39,8 @@ namespace RentAdminPannel.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ModelState.Clear();
+            ViewBag.SuccessMessage = "Registration Done! Click on Home Button";
             return View("Index");
         }
     }

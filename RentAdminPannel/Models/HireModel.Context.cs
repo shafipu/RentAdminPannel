@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     using System.Data.Entity;
@@ -15,10 +15,10 @@ namespace RentAdminPannel
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class rentdbEntities : DbContext
+    public partial class rentdbEntities3 : DbContext
     {
-        public rentdbEntities()
-            : base("name=rentdbEntities")
+        public rentdbEntities3()
+            : base("name=rentdbEntities3")
         {
         }
     
