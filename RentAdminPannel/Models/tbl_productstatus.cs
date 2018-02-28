@@ -7,30 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
-    public partial class tbl_subcategory
+    public partial class tbl_productstatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_subcategory()
+        public tbl_productstatus()
         {
             this.tbl_product = new HashSet<tbl_product>();
         }
-
-        [Key]
-        public long subcategoryid { get; set; }
-        public string subcategoryname { get; set; }
-        public string subcategorydescription { get; set; }
+     [Key]
+        public long poductstatusid { get; set; }
+        public string status { get; set; }
         public string entryby { get; set; }
         public Nullable<System.DateTime> entrydate { get; set; }
-        public Nullable<byte> isActive { get; set; }
-        public Nullable<long> fk_categoryid { get; set; }
     
-        public virtual tbl_category tbl_category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_product> tbl_product { get; set; }
     }

@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     
-    public partial class pSelectAllproductstatus_Result
+    public partial class pSelectAllproductstatus_withparticularID_Result
     {
         public long poductstatusid { get; set; }
         public string status { get; set; }

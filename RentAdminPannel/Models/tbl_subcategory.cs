@@ -7,27 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentAdminPannel
+namespace RentAdminPannel.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
-    public partial class tbl_questionmaster
+    public partial class tbl_subcategory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_questionmaster()
+        public tbl_subcategory()
         {
-            this.tbl_usermaster = new HashSet<tbl_usermaster>();
+            this.tbl_product = new HashSet<tbl_product>();
         }
-        [Key]
-        public long questionid { get; set; }
-        public string question { get; set; }
-        public Nullable<byte> isActive { get; set; }
+    [Key]
+        public long subcategoryid { get; set; }
+        public string subcategoryname { get; set; }
+        public string subcategorydescription { get; set; }
         public string entryby { get; set; }
-        public Nullable<System.DateTime> enteydate { get; set; }
+        public Nullable<System.DateTime> entrydate { get; set; }
+        public Nullable<byte> isActive { get; set; }
+        public Nullable<long> fk_categoryid { get; set; }
     
+        public virtual tbl_category tbl_category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_usermaster> tbl_usermaster { get; set; }
+        public virtual ICollection<tbl_product> tbl_product { get; set; }
     }
 }
